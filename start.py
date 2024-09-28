@@ -1,7 +1,7 @@
 import os
 import google.generativeai as genai
 
-genai.configure(api_key= "AIzaSyBTz6-CEQ-oW32-XpJ030NhDfztouwQydk")
+genai.configure(api_key= "YOUR_API_KEY")
 
 # Create the model
 generation_config = {
@@ -27,7 +27,6 @@ chat_session = model.start_chat(
 while True:
     s = "> "
     inp = input(s)
-
 
     response = chat_session.send_message(inp)
     print(response.text)
